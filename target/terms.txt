@@ -1,0 +1,326 @@
+home :767
+able :107
+dinner :14
+work :52
+home occupant :1088
+light :170
+house :355
+music :63
+mood :17
+fan :16
+favorite show :13
+minute :24
+late :12
+pet owner :138
+safe :95
+comfortable :32
+text :20
+school :19
+day :92
+parent :333
+date :11
+kid :71
+thing :61
+food :108
+tv :35
+morning :40
+time :245
+wake :52
+amount :32
+door :175
+night :77
+ready :32
+music fan :5
+available :12
+temperature :116
+weather :30
+energy bill :9
+driver :6
+garage door :19
+sens :16
+vehicle :11
+outside :42
+control :30
+nobody :11
+electricity :52
+bill :19
+auto :16
+plant :25
+home owner :621
+monitor :72
+energy use :6
+energy consumption :9
+money :67
+energy :165
+sure :28
+case :23
+baby :20
+anything :27
+electricity bill :7
+family member :14
+pet :45
+someone :90
+family :53
+best :7
+space :5
+cold :28
+motion :33
+safety :25
+box :12
+automatic :53
+bad :15
+cool :17
+air :50
+hot :18
+child :146
+place :20
+potential :7
+appliance :51
+anyone :19
+person :130
+low :40
+care :18
+area :26
+snow :6
+high :17
+camera :12
+consumer :16
+news :11
+dry :15
+new :12
+feature :44
+comfort :7
+healthy :32
+body :10
+daily :12
+gas :15
+activity :15
+nice :11
+health :41
+window :32
+police :14
+ability :18
+party :7
+garage :13
+sound :26
+emergency :14
+active :8
+movie :24
+inside :35
+environment :8
+type :7
+floor :42
+music lover :22
+people :40
+use :26
+coffee machine :6
+coffee :27
+water :149
+schedule :12
+system :75
+need :22
+possible :17
+carbon :19
+close :21
+show :20
+lover :7
+device :70
+item :37
+location :9
+energy cost :10
+energy efficient :7
+fire :34
+easier :10
+alert :190
+specific sound :6
+text message :16
+mobile phone :8
+car :25
+guest :15
+security :13
+property :10
+key :13
+aware :35
+open :45
+electronics :20
+easy :9
+lower :12
+turn :12
+dark :12
+game :19
+meal :15
+occupant :37
+moment :6
+movie lover :5
+favorite music :5
+different :18
+voice :67
+exit :5
+life :13
+dust :7
+fresh air :8
+early :6
+picture :6
+electric :10
+foot :8
+electronic device :7
+sense :35
+small :10
+package :13
+wife :18
+help :14
+smoke :32
+front :16
+approach :6
+message :6
+station :5
+empty :16
+radio :6
+specific :8
+clock :11
+movement :24
+owner :34
+call :8
+mother :31
+son :10
+machine :32
+access :25
+eye :9
+real time :5
+track :71
+front door :27
+mobile :9
+evening :6
+specific time :11
+assistant :7
+cleaner :7
+full :14
+sunlight :12
+wall :17
+heating :12
+technology :8
+search :7
+hour :23
+something :59
+milk :6
+damage :10
+housewife :6
+television :26
+breakfast :5
+outside light :5
+bright :5
+health problem :5
+fixed :5
+presence :8
+refrigerator :35
+change :13
+list :19
+hand :11
+shopping list :6
+phone :93
+store :17
+husband :16
+human :7
+someone approach :6
+child 's :5
+computer :26
+step :9
+winter :14
+ingredient :6
+weight :10
+privacy :9
+entertainment :10
+voice command :11
+touch :6
+living :8
+collar :6
+pipe :7
+level :30
+summer :7
+sleep :12
+situation :10
+long :16
+hot water :12
+longer :5
+outlet :9
+mode :5
+option :11
+degree :8
+power :26
+self :21
+toilet :21
+command :8
+individual :6
+father :5
+utility :9
+large :5
+next :6
+accident :8
+free :6
+sunny :5
+event :9
+mail :16
+back door :8
+weather condition :5
+matter :9
+quality :5
+program :18
+preference :7
+clothes :29
+supply :6
+clothing :5
+waste time :5
+automatic light :5
+play :5
+car owner :9
+everyone :13
+rain :5
+filter :6
+present :6
+drink :8
+start :5
+appropriate :11
+ground :6
+cost :6
+water level :8
+everything :8
+vacation :8
+pool :14
+warning :5
+favorite :8
+necessary :12
+head :7
+fresh :7
+screen :16
+waste energy :10
+inventory :6
+waste water :6
+neighbor :5
+water bill :5
+sort :5
+friend :7
+network :6
+medicine :7
+load :5
+cell phone :7
+waste :11
+escape :5
+hair :5
+garbage :6
+less energy :5
+sound system :5
+panel :7
+cabinet :6
+efficient :7
+peace :6
+drain :5
+security system :6
+sport fan :5
+unwanted :7
+roof :9
+authority :6
+stair :10
+automatic door :5
+fall :5
+dirty :5
+rural home occupant :5
