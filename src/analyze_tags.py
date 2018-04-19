@@ -5,10 +5,17 @@ Created on Thu Jan  4 16:43:23 2018
 @author: Tim G
 """
 
-def analyze_tags(index,tag_index,name="tag"):
-    print(" Number of glossary terms: "+str(len(index.keys())))
-    print(" Number of "+name+": "+str(len(tag_index.keys())))
+def analyze_tags(index,tag_index,name="tag",silent=False):
+    global no_identical_terms
+    global no_contained_terms
+    global no_contained_tags
+    if not silent:
+        print(" Number of glossary terms: "+str(len(index.keys())))
+        print(" Number of "+name+": "+str(len(tag_index.keys())))
     # how many glossary terms are tags?
+    global no_terms_as_tags
+    global no_terms_as_tag_parts
+    global no_tags_as_term_parts
     no_terms_as_tags = 0
     no_terms_as_tag_parts = 0
     no_tags_as_term_parts = 0
@@ -30,9 +37,10 @@ def analyze_tags(index,tag_index,name="tag"):
                 if contained(tag,term):
                     no_tags_as_term_parts = no_tags_as_term_parts + 1
                     break
-    print("Number of terms also used as "+name+"s: "+str(no_terms_as_tags));
-    print("Number of terms that are part of, but not identical to "+name+"s: "+str(no_terms_as_tag_parts))
-    print("Number of "+name+"s that are part of, but not identical to terms: "+str(no_tags_as_term_parts))
+    if not silent:
+        print("Number of terms also used as "+name+"s: "+str(no_terms_as_tags));
+        print("Number of terms that are part of, but not identical to "+name+"s: "+str(no_terms_as_tag_parts))
+        print("Number of "+name+"s that are part of, but not identical to terms: "+str(no_tags_as_term_parts))
     no_identical_terms = 0
     global identical_terms
     identical_terms = []
@@ -65,9 +73,10 @@ def analyze_tags(index,tag_index,name="tag"):
                     contained_tags = contained_tags + [tag]
                     contained_tag_tuples = contained_tag_tuples + [(tag,term)]
                     break
-    print("Number of terms where the requirements list matches exactly the requirements list of a "+name+":"+str(no_identical_terms))
-    print("Number of terms where the requirements list is contained in the requirements list of a "+name+":"+str(no_contained_terms))
-    print("Number of "+name+"s where the requirements list is contained in the requirements list of a term:"+str(no_contained_tags))
+    if not silent:
+        print("Number of terms where the requirements list matches exactly the requirements list of a "+name+":"+str(no_identical_terms))
+        print("Number of terms where the requirements list is contained in the requirements list of a "+name+":"+str(no_contained_terms))
+        print("Number of "+name+"s where the requirements list is contained in the requirements list of a term:"+str(no_contained_tags))
 
 def contained(tuple1,tuple2):
     for element in tuple1:
