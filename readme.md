@@ -3,6 +3,8 @@
 This is the code used to extract and analyze glossary term candidates from the CrowdRE dataset in
 the conference paper proposal by Gemkow, Conzelmann, Hartig and Vogelsang.
 
+The file "Extended Report.pdf" presents an extended version of our findings that also discusses the effects of varying elements of our processing pipelines on the extracted glossary term candidates.
+
 The paper, and this code, builds on the CrowdRE dataset:
 P. K. Murukannaiah, N. Ajmeri, and M. P. Singh, “The smarthome crowd requirements dataset,” https://crowdre.github.io/murukannaiah-smarthome-requirements-dataset/ , Apr. 2017.
 
