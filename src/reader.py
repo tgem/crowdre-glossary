@@ -5,7 +5,7 @@ Created on Sat Dec  2 09:27:09 2017
 @author: Tim G
 """
 
-import csv
+import csv, os
 from nltk.stem import WordNetLemmatizer
 
 # Read in all requirements and store each as a separate complete sentence
@@ -13,7 +13,7 @@ from nltk.stem import WordNetLemmatizer
 def gt_read(max_lines=-1):
     gt = []
     i = 0
-    with open('..\\data\\ground_truth.csv', newline='') as csvfile:
+    with open(f'..{os.sep}data{os.sep}ground_truth.csv', newline='') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             gt.append(process_tags(row['manual terms']))
@@ -27,7 +27,7 @@ def reqs_read(read_tags=False,max_lines=-1):
     ids = []
     tags = []
     i = 0
-    with open('..\\data\\requirements.csv', newline='') as csvfile:
+    with open(f'..{os.sep}data{os.sep}requirements.csv', newline='') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             reqs.append('As a '+row['role']+' I want '+row['feature']+ " so that "+row['benefit']+".")

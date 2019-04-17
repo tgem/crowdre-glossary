@@ -8,7 +8,7 @@ Created on Sat Dec  2 09:28:55 2017
 from nltk.corpus import treebank
 from nltk.tag import DefaultTagger, UnigramTagger, BigramTagger, TrigramTagger, tnt
 
-import pickle
+import os, pickle
 
 # POS tagging
 
@@ -25,16 +25,16 @@ def train_tagger(tagger_name):
     return trained_tagger
 
 def save_tagger(tagger, tagger_name):
-    with open('..\\temp\\'+tagger_name+'.pickle','wb') as f:
+    with open(f'..{os.sep}temp{os.sep}'+tagger_name+'.pickle','wb') as f:
         pickle.dump(tagger,f)
         
 def load_tagger(tagger_name):
-    with open('..\\temp\\'+tagger_name+'.pickle','rb') as f:
+    with open(f'..{os.sep}temp{os.sep}'+tagger_name+'.pickle','rb') as f:
         return pickle.load(f)
 
 def reqs_tag(reqs,ids,mode='load',tagger_name='tagger'):
     if mode=='load':
-        with open('..\\temp\\tagged_reqs.pickle','rb') as f:
+        with open(f'..{os.sep}temp{os.sep}tagged_reqs.pickle','rb') as f:
             tagged_reqs = pickle.load(f)
     else:
         if mode=='load tagger':
