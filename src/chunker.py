@@ -42,10 +42,7 @@ def reqs_chunk(tagged_reqs,ids,chunk_mode="statistical"):
     return terms, term_index
 
 def statistical_reqs_chunk(tagged_reqs,ids):
-    try:
-        train_chunks = treebank_chunk.chunked_sents()[:100]
-    except:
-        True
+    train_chunks = treebank_chunk.chunked_sents()[:100]
     chunker = TagChunker(train_chunks)
     terms=[]
     term_index=[]
