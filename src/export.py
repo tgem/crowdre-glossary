@@ -9,14 +9,14 @@ Created on Sat Dec  2 09:39:48 2017
 Export
 """
 
-import openpyxl as pyxl
+import openpyxl as pyxl, os
 
 def print_index(index):
     for term in index:
         print(term)
 
 def save_index_as_text(index):
-    with open('..\\target\\terms.txt', 'w') as f:
+    with open(f'..{os.sep}target{os.sep}terms.txt', 'w') as f:
         for term in index:
             termstring = ""
             for element in term:
@@ -58,4 +58,4 @@ def save_index_as_xlsx(index, reqs, ids):
     ws.auto_filter.ref = "A1:B"+str(i)
     ws.column_dimensions['A'].width = 25
     ws.column_dimensions['B'].width = 80
-    wb.save('..\\target\\glossary.xlsx')
+    wb.save(f'..{os.sep}target{os.sep}glossary.xlsx')

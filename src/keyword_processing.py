@@ -18,6 +18,8 @@ import crowdre_indexfilter
 import pandas as pd
 import crowdre_reader as cr
 
+import os
+
 def glossary_extraction(lemmatize_mode='lemmatize',threshold_coverage=5,mode = 'threshold'):
     reqs, ids = crowdre_reader.reqs_read()
     reqs, ids = crowdre_tokenizer.reqs_tokenize(reqs,ids)
@@ -72,7 +74,7 @@ def keyToReq(keywords):
     for key in keywords['keyword']:
         ind = oReq['req'].str.contains(key)
         oReq['keywords'][ind]=oReq['keywords'][ind] + "," + key
-    tags = pd.read_csv('..\\..\\..\\data\\requirements.csv')
+    tags = pd.read_csv(f'..{os.sep}..{os.sep}..{os.sep}data{os.sep}requirements.csv')
     tags = tags[['tags']]
     oReq['tags']=tags
     return oReq
@@ -81,7 +83,7 @@ def DistinctTags(writeTags = False,load = False,loadFile = 'unique Tags.xlsx'):
     if load:
         dTags = pd.read_excel(loadFile)
     else:
-        tags = pd.read_csv('..\\..\\..\\data\\requirements.csv')
+        tags = pd.read_csv(f'..{os.sep}..{os.sep}..{os.sep}data{os.sep}requirements.csv')
         tags = tags[['tags']]
         dTags = pd.DataFrame(columns=['tag','freq'])
         from nltk.stem import WordNetLemmatizer

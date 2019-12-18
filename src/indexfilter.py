@@ -13,7 +13,7 @@ from matplotlib import pyplot as plt
 from nltk.corpus import treebank
 import analyze_coverage
 from pipeline import glossary_extraction
-import pickle
+import pickle, os
 
 no_comp_reqs=5000 # number of sentences from TreeBank to use for comparison
 
@@ -22,7 +22,7 @@ def create_filter_index():
         ids = list(range(no_comp_reqs))
         tags = ["" for sent in sents]
         filter_index,_,_,_ = glossary_extraction(sents, ids, tags, tag_mode="load tagger", filter_mode="threshold", threshold_coverage=1)
-        with open('../temp/filter_index.pickle','wb') as f:
+        with open(f'..{os.sep}temp{os.sep}filter_index.pickle','wb') as f:
             pickle.dump(filter_index,f)
 
 def index_filter(index,no_reqs,threshold_coverage=5,filter_mode=["threshold"],times=1):
@@ -40,7 +40,7 @@ def index_filter(index,no_reqs,threshold_coverage=5,filter_mode=["threshold"],ti
     if "specificity" in filter_mode:
         filtered_keys = []
         print(filtered_keys)
-        with open('../temp/filter_index.pickle','rb') as f:
+        with open(f'..{os.sep}temp{os.sep}filter_index.pickle','rb') as f:
             filter_index = pickle.load(f)
         global comparison_index
         comparison_index = {}
@@ -55,7 +55,7 @@ def index_filter(index,no_reqs,threshold_coverage=5,filter_mode=["threshold"],ti
             index.pop(key)
     return index
 
-def analyze_index_filter(index,reqs,ids,description="Analysis of index filter",covered_range=11,output='memory',filenames=['../target/number_of_glossary_terms_by_filter_threshold.pdf','../target/coverage_by_filter_threshold.pdf','../target/double_coverage_by_filter_threshold.pdf']):
+def analyze_index_filter(index,reqs,ids,description="Analysis of index filter",covered_range=11,output='memory',filenames=[f'..{os.sep}target{os.sep}number_of_glossary_terms_by_filter_threshold.pdf',f'..{os.sep}target{os.sep}coverage_by_filter_threshold.pdf',f'..{os.sep}target{os.sep}double_coverage_by_filter_threshold.pdf']):
     print()
     print(description)
     index_copy = index.copy()
